@@ -3,37 +3,26 @@
 <head>
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
-    <body>
-        <h1>{{c['name']}}</h1>
-	<div class='properties'>
-		<div>
-			<div>continent</div>
-			<div><a href='../continent/{{c['continent']}}'>{{c['continent']}}</a></div>
+	<body>
+		<h1>{{c['name']}}</h1>
+		<div class='properties'>
+			<div>
+				<div>Capital</div>
+				<div>{{c['capital']}}</div>
+			</div>
+			<div>
+				<div>Continent</div>
+				<div><a href='../continent/{{c.continent}}'>{{c['continent']}}</a></div>
+			</div>
+			<div>
+				<div>Population</div>
+				<div>{{"{:,.0f}".format(c['population'])}}</div>
+			</div>
+			<div>
+				<div>GDP (million $)</div>
+				<div>{{ "{:,.0f}".format(c['gdp']/1000000) }}</div>
+			</div>
 		</div>
-		<div>
-			<div>area</div>
-			<div>{{c['area']}}</div>
-		</div>
-		<div>
-			<div>population</div>
-			<div>{{c['population']}}</div>
-		</div>
-		<div>
-			<div>gdp</div>
-			<div>{{c['gdp']}}</div>
-		</div>
-		<div>
-			<div>capital</div>
-			<div>{{c['capital']}}</div>
-		</div>
-		<div>
-			<div>tld</div>
-			<div>{{c['tld']}}</div>
-		</div>
-		<div>
-			<div>flag</div>
-			<div><img src={{c['flag']}}></div>
-		</div>
-	</div>
-    </body>
+		<img src="/static/flags/{{c['tld']}}.gif" class='big'>
+	</body>
 </html>
