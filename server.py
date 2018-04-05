@@ -74,15 +74,14 @@ def editCountryByName(n):
 @app.route('/updatecountrybyname')
 def updateCountryByName():
         n = request.args.get('name')
+        c = None
         for x in w:
                 if x['name']==n:
-                        break
+                        c = x
         c['capital'] = request.args.get('capital')
+        c['continent'] = request.args.get('continent')
         c['area'] = request.args.get('area')
-        a = "{:,.0f}".format(float(c['population']))
-        c['population'] = a
         c['population'] = request.args.get('population')
-        c['gdp'] = float(c['gdp'])
         c['gdp'] = request.args.get('gdp')
         c['tld'] = request.args.get('tld')
         return render_template('country.html',
