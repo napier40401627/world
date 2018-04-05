@@ -5,7 +5,7 @@
 </head>
 	<body>
 		<h1>World Factbook</h1>
-		<div>There are {{w|length}} countries in in the world.</div>
+		<div>There are {{w|length}} countries in in this page.</div>
 		<ul>
 			{% for c in w %}
 			<li><a href='/countryByName/{{c.name}}'>
@@ -14,10 +14,18 @@
 			{% endfor %}
 		</ul>
 		<div class='nav_button'>
+			{% if page_number-page_size == -20 %}
+			<a href='#'>Previous Page</a>
+			{% else %}
 			<a href='/begin/{{page_number-page_size}}'>Previous Page</a>
+			{% endif %}
 		</div>
 		<div class='nav_button'>
+			{% if page_number+page_size == 200 %}
+			<a href='#'>Next Page</a>
+			{% else %}
 			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
+			{% endif %}
 		</div>
 	</body>
 </html>

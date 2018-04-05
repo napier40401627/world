@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+	<link rel='stylesheet' href='/static/style.css'>
+</head>
+	<body>
+		<form action="/docountrybyname">
+			<div class='properties'>
+				<div>
+					<div><input name='name' value="{{c['name']}}"></a></div>
+				</div>
+				<div>
+					<div>Capital</div>
+					<div><input name='capital' value="{{c['capital']}}"></a></div>
+				</div>
+				<div>
+					<div>Continent</div>
+					<div><input name='continent' value="{{c['continent']}}"></a></div>
+				</div>
+				<div>
+				<div>Area</div>
+					<div><input name='area' value="{{c['area']}}"></div>
+				</div>
+				<div>
+					<div>Population</div>
+					<div><input name='population' value="{{c['population']}}"></a></div>
+				</div>
+				<div>
+					<div>GDP (million $)</div>
+					<div><input name='gdp' value="{{c['gdp']}}"></a></div>
+				</div>
+				<div>
+				<div>TLD</div>
+					<div><input name='tld' value="{{c['tld']}}"></a></div>
+				</div>
+			</div>
+			<img src="/static/flags/{{c['tld']}}.gif" class='big'>
+		</div>
+		<input type="submit">
+	</form>
+	</body>
+</html>
