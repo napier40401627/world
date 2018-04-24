@@ -27,5 +27,10 @@
 			<a href='/begin/{{page_number+page_size}}'>Next Page</a>
 			{% endif %}
 		</div>
+		<div class='countrybyalpha'>
+			{% for c in cba %}
+			<a href="/countrybyalpha/{{c}}">{{c}}</a>
+			{% endfor %}
+		</div>
 	</body>
 </html>
