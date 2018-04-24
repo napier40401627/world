@@ -3,7 +3,7 @@
 <head>
 	<link rel='stylesheet' href='/static/style.css'>
 </head>
-	<body>
+	<body style="background-color:#F0F8FF">
 	<form action='/updatecountrybyname'>
 		<h1>{{c['name']}}</h1>
 			<div class='properties'>
@@ -38,6 +38,5 @@
 			<img src="/static/flags/{{c['tld']}}.gif" class='big'>
 			<input type='submit'>
 		</form>
-		<div> <a href='/delete/{{c.name}}'> Delete </a> </div>
 	</body>
 </html>
