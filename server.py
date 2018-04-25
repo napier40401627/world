@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request
 import json
-d = 200
 w = json.load(open("worldl.json"))
 for c in w:
 	c['tld'] = c['tld'][1:]
@@ -33,8 +32,7 @@ def continentPage(a):
 		'continent.html',
 		length_of_cl = len(cl),
 		cl = cl,
-		a = a
-		)
+		a = a)
 @app.route('/country/<i>')
 def countryPage(i):
 	return render_template(
