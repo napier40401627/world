@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+<body>
+{% block content %} {% endblock %}
+<div class='countrybyalpha'>
+			{% for c in cba %}
+			<a href="/countrybyalpha/{{c}}">{{c}}</a>
+			{% endfor %}
+</div>
+<!--<div class='countrybyalpha'>
+			{% for c in con %}
+			<a href="/continent/{{c}}">{{c}}</a>
+			{% endfor %}
+</div>-->
+</body>
+</html>
